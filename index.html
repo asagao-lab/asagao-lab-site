@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASAGAO LAB | アプリ開発スタジオ</title>
+<meta name="description" content="ASAGAO LAB（アサガオラボ）は、モバイルアプリ・ゲームの企画・開発を行う日本の開発スタジオです。">
+<style>
+  :root {
+    --ink: #1f2430;
+    --sub: #5b6272;
+    --accent: #5a67d8;
+    --accent-soft: #eef0fb;
+    --bg: #fbfbfd;
+    --card: #ffffff;
+    --line: #e6e8ef;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.8;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 96px 0 72px;
+    background: linear-gradient(160deg, #f5f6ff 0%, #fbfbfd 70%);
+    border-bottom: 1px solid var(--line);
+  }
+  .logo-mark {
+    display: inline-block;
+    width: 56px; height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #7f9cf5, #5a67d8);
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .logo-mark::after {
+    content: "";
+    position: absolute; inset: 16px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: .9;
+  }
+  h1 { font-size: 2.1rem; letter-spacing: .06em; }
+  .tagline { color: var(--sub); margin-top: 10px; font-size: 1.02rem; }
+
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  h2 {
+    font-size: 1.25rem;
+    letter-spacing: .08em;
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  h2::before {
+    content: "";
+    width: 22px; height: 4px; border-radius: 2px;
+    background: var(--accent);
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .app { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .app-icon {
+    width: 72px; height: 72px; border-radius: 18px; flex-shrink: 0;
+    background: conic-gradient(from 40deg, #f56565, #ecc94b, #48bb78, #4299e1, #9f7aea, #f56565);
+    position: relative;
+  }
+  .app-icon::after {
+    content: ""; position: absolute; inset: 22px; border-radius: 50%; background: #fff;
+  }
+  .app h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .app p { color: var(--sub); font-size: .95rem; }
+  .store-link {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 9px 20px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: .92rem;
+    transition: opacity .15s;
+  }
+  .store-link:hover { opacity: .85; }
+
+  dl.company { display: grid; grid-template-columns: 9em 1fr; row-gap: 14px; }
+  dl.company dt { color: var(--sub); font-size: .92rem; padding-top: 2px; }
+  dl.company dd { font-size: .98rem; }
+
+  .contact-mail {
+    font-size: 1.05rem;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+  .note { color: var(--sub); font-size: .88rem; margin-top: 10px; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0 48px;
+    color: var(--sub);
+    font-size: .85rem;
+  }
+  footer a { color: var(--sub); }
+  @media (max-width: 560px) {
+    header { padding: 64px 0 48px; }
+    h1 { font-size: 1.6rem; }
+    dl.company { grid-template-columns: 1fr; row-gap: 4px; }
+    dl.company dd { margin-bottom: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="logo-mark" aria-hidden="true"></span>
+    <h1>ASAGAO LAB</h1>
+    <p class="tagline">モバイルアプリ・ゲームの企画・開発スタジオ<br>Mobile app &amp; game development studio, Japan</p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>
+      ASAGAO LAB（アサガオラボ）は、モバイルアプリおよびゲームの企画・開発・運営を行う日本の開発スタジオです。
+      「小さくても、毎日ひらく」を合言葉に、日々の暮らしの中で気軽に楽しめるアプリづくりに取り組んでいます。
+    </p>
+  </div>
+</section>
+
+<section id="apps">
+  <div class="wrap">
+    <h2>Apps</h2>
+    <div class="card app">
+      <span class="app-icon" aria-hidden="true"></span>
+      <div>
+        <h3>Color Picker Game</h3>
+        <p>
+          表示されたお手本の色を、カラーパレットからどれだけ正確に再現できるかを競う色彩感覚トレーニングゲーム。
+          シンプルな操作で、色を見る目を毎日少しずつ鍛えられます。（Android / Google Play）
+        </p>
+        <a class="store-link" href="https://play.google.com/store/apps/details?id=com.adaxGame.ColorPickerGame" target="_blank" rel="noopener">Google Play で見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="company">
+  <div class="wrap">
+    <h2>Studio</h2>
+    <div class="card">
+      <dl class="company">
+        <dt>名称</dt><dd>ASAGAO LAB（アサガオラボ）</dd>
+        <dt>事業内容</dt><dd>モバイルアプリ・ゲームの企画、開発、運営</dd>
+        <dt>所在地</dt><dd>日本</dd>
+        <dt>ウェブサイト</dt><dd>https://asagao-lab.com</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>アプリに関するお問い合わせ・ご意見は、下記メールアドレスまでお願いいたします。</p>
+    <p style="margin-top:14px"><a class="contact-mail" href="mailto:contact@asagao-lab.com">contact@asagao-lab.com</a></p>
+    <p class="note">内容により、返信までお時間をいただく場合があります。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><a href="privacy.html">プライバシーポリシー / Privacy Policy</a></p>
+    <p style="margin-top:8px">&copy; 2026 ASAGAO LAB. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
